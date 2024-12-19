@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seyahat Rehberi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #121f29;
+            color: white;
+            padding: 1em;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            background-color: #9e5656;
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            float: left;
+            color: white;
+            text-decoration: none;
+            padding: 14px 16px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: #454045;
+            color: white;
+        }
+        .page {
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .page.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        section img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 1px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .comment-form input, .comment-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .comment-form button {
+            background-color: #45afd8;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .comment-form button:hover {
+            background-color: #303afd;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Seyahat Rehberi</h1>
+    <p>Türkiye'nin en güzel yerlerini keşfetmek için doğru adres.</p>
+    <img src="https://www.etstur.com/letsgo/wp-content/uploads/2015/06/lets-go-885x35617-1.jpg" alt="Muğla Sıtkı Koçman Üniversitesi"
+    style="white: 100px;px; height: 180px;px;">
+</header>
+
+<nav>
+    <a onclick="showPage('anasayfa')">Ana Sayfa</a>
+    <a onclick="showPage('gezilecek-yerler')">Gezilecek Yerler</a>
+    <a onclick="showPage('oteller')">Oteller</a>
+    <a onclick="showPage('yorumlar')">Yorumlar</a>
+    <a onclick="showPage('iletisim')">İletişim</a>
+</nav>
+
+<div id="anasayfa" class="page active">
+    <h2>Ana Sayfa</h2>
+    <p>Türkiye'de unutulmaz bir seyahat deneyimi yaşayın!</p>
+    <img src="https://www.seyatra.com/wp-content/uploads/2024/09/Son-Zamanlarda-Yukselen-20-Seyahat-Trendi-850x560.webp" alt="Muğla Sıtkı Koçman Üniversitesi"
+    style="white: 500px;px; height: 400px;px;">
+</div>
+
+<div id="gezilecek-yerler" class="page">
+    <h2>Gezilecek Yerler</h2>
+    
+
+    <h3>Muğla Sıtkı Koçman Üniversitesi</h3>
+    <img src="http://www.mu.edu.tr/Icerik/Sayfa/bidb.mu.edu.tr/uni1.png" alt="Muğla Sıtkı Koçman Üniversitesi"
+    style="white: 500px; height: 750px;">
+    <p>Muğla'nın en önemli eğitim kurumlarından biridir.</p>
+
+    <h3>Uzungöl</h3>
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/d0/e2/b9/caption.jpg?w=800&h=-1&s=1" alt="Uzungöl"
+    style="white: 500px; height: 670px;">
+    <p>Uzungöl, Karadeniz'in eşsiz doğası ve sakinliği ile ziyaretçileri ağırlar.</p>
+
+    <h3>Fethiye</h3>
+    <img src="https://visitturkey.in/wp-content/uploads/2024/07/fethiye-coastline.webp" alt="Fethiye"
+    style="white: 500px; height: 288px;">
+    <p>Fethiye, muhteşem plajları ve doğal güzellikleriyle ünlüdür.</p>
+
+    <h3>Akyaka</h3>
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/c1/66/73/azmak-nehri2-largejpg.jpg?w=800&h=500&s=1" alt="Akyaka"
+     style="white: 500px; height: 312px;">
+    <p>Akyaka, Azmak Nehri'nin huzurlu manzaraları ile ziyaretçileri büyüler.</p>
+
+    <h3>Kapadokya</h3>
+    <img src="https://www.coraltatil.com/resources/hotelImages/800x600/58463/CoralTatil-Klasik-Kapadokya-Turu-2_c_80.jpg?7627873992ef5fc2ab17af4aedb501ce" alt="Kapadokya"
+    style="white: 500px; height: 380px;">
+    <p>Kapadokya, balon turları ve peri bacaları ile ünlüdür.</p>
+
+    <h3>Üsküdar</h3>
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/8b/bf/97/eminonu-pier.jpg?w=800&h=500&s=1" alt="Üsküdar"
+    style="white: 500px; height: 320px;">
+    <p>Üsküdar, İstanbul'un tarihi dokusunu yansıtan bir semttir.</p>
+
+    
+</div>
+
+<div id="oteller" class="page">
+    <h2>Oteller</h2>
+    <ul>
+        <li>Kapadokya Hotel & Spa</li>
+        <li>Harbour Fethiye</li>
+        <li>İstanbul Bosphorus Hotel</li>
+
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/0a/28/88/delphin-imperial-hotel.jpg?w=800&h=-1&s=1"
+    style="white: 100px;px; height: 300px;px;">
+    </ul>
+</div>
+
+<div id="yorumlar" class="page">
+    <h2>Yorumlar</h2>
+    <form class="comment-form" onsubmit="handleCommentSubmit(event)">
+        <input type="text" placeholder="Adınız" required>
+        <textarea rows="5" placeholder="Yorumunuzu yazın" required></textarea>
+        <button type="submit">Gönder</button>
+    </form>
+</div>
+
+<div id="iletisim" class="page">
+    <h2>İletişim</h2>
+    <p>Bize ulaşmak için:</p>
+    <p>Email: info@seyahat-rehberi.com</p>
+</div>
+
+<footer>
+    <p>&copy; 2024  Seyahat Rehberi. Tüm hakları saklıdır.</p>
+</footer>
+
+<script>
+    function showPage(pageId) {
+        const pages = document.querySelectorAll('.page');
+        pages.forEach(page => page.classList.remove('active'));
+        const targetPage = document.getElementById(pageId);
+        targetPage.classList.add('active');
+    }
+
+    function handleCommentSubmit(event) {
+        event.preventDefault();
+        alert("Gönderildi!");
+    }
+</script>
+
+</body>
+</html>
